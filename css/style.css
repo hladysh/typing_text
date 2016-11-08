@@ -1,0 +1,87 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,500,700&subset=latin,cyrillic);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,300italic,400italic&subset=latin,cyrillic);
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  min-height: 100vh;
+  overflow: hidden;
+  overflow-y: auto;
+  position: relative;
+  z-index: 0;
+  display: block;
+  font-family: "Open Sans";
+}
+
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  display: block;
+  position: relative;
+  background-color: #fefefe;
+}
+
+.wrapper .nice-form {
+  width: 300px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.wrapper .nice-form input[type="text"], .wrapper .nice-form input[type="password"] {
+  width: 100%;
+  height: 45px;
+  border: 0;
+  outline: 0;
+  padding: 10px;
+  margin-top: 12px;
+  color: #eeeeee;
+  background-color: #303841;
+  transition: box-shadow 0.3s ease-out;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  z-index: 2;
+}
+
+.wrapper .nice-form input[type="text"]:focus, .wrapper .nice-form input[type="text"]:hover, .wrapper .nice-form input[type="password"]:focus, .wrapper .nice-form input[type="password"]:hover {
+  box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.4);
+}
+
+.wrapper .nice-form label {
+  color: #303841;
+  font-size: 36px;
+  font-weight: 100;
+  margin-bottom: 28px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.wrapper .nice-form input[type="submit"] {
+  color: white;
+  border: 0;
+  outline: 0;
+  width: 100%;
+  height: 35px;
+  margin-top: 12px;
+  background-color: #D72323;
+  box-shadow: 0px 2px 14px rgba(215, 35, 35, 0.1);
+  padding: 10px;
+  position: relative;
+  z-index: 1;
+  transform: translateY(-47px);
+  transition: background-color 0.1s ease-out, box-shadow 0.3s linear, transform 0.3s cubic-bezier(0, 1.65, 1, 1), opacity 0.3s linear;
+}
+
+.wrapper .nice-form input[type="submit"]:hover {
+  background-color: #e24b4b;
+  box-shadow: 0px 2px 14px rgba(215, 35, 35, 0.5);
+}
+
+.wrapper .nice-form input[type="submit"].available {
+  transform: translateY(0px);
+  opacity: 1;
+}
